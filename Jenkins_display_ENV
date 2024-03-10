@@ -1,0 +1,14 @@
+//https://e.printstacktrace.blog/jenkins-pipeline-environment-variables-the-definitive-guide/
+//List environment variables
+
+pipeline {
+    agent any
+
+    stages {
+        stage("Env Variables") {
+            steps {
+                sh "printenv"
+            }
+        }
+    }
+}
