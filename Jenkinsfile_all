@@ -17,6 +17,6 @@ pipeline:
         - sh "ls -al"
         - sh "pwd"
         - sh "hostname"
-        - sh "chown u+x ./hello.py"
+        - sh "chmod u+x ./hello.py"
         - sh "./hello.py"
 
