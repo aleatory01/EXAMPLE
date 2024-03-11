@@ -15,3 +15,5 @@ pipeline:
     - stage: "TEST"
       steps:
         - sh "ls -al"
+        - sh "pwd"
+
