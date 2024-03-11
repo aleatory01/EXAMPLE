@@ -18,3 +18,5 @@ pipeline:
         - sh "pwd"
         - sh "hostname"
         - sh "sudo touch aaa"
+        - sh "chmod u+x hello.py"
+        - sh "hello.py"
