@@ -1,14 +1,13 @@
-//https://e.printstacktrace.blog/jenkins-pipeline-environment-variables-the-definitive-guide/
-//List environment variables
-
-pipeline {
-    agent any
-
-    stages {
-        stage("Env Variables") {
-            steps {
-                sh "printenv | sort"
-            }
-        }
-    }
-}
+pipeline:
+  agent:
+    any:
+  stages:
+    - stage: "Log versions"
+      steps:
+        - sh "git --version"
+    - stage: "Jenkins YAML Builder"
+      steps:
+        - sh "git --version"
+    - stage: "Final Jenkins YAML Pipeline Stage"
+      steps:
+        - sh "echo 'Jenkins YAML Pipeline Complete'"
