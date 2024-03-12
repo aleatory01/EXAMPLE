@@ -5,6 +5,8 @@ pipeline {
       steps {
         echo "Welcome to Jenkins declaratives"
         sh 'git --version'
+      }
+      steps ("Git version") {
         sh 'chmod +x hello.py'
         sh '/usr/bin/python3 hello.py'
       }
