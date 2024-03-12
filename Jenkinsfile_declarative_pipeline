@@ -5,9 +5,11 @@ pipeline {
     stage ("Welcome")
     {
       steps
+      {
         echo "Welcome to Jenkins declaratives"
         sh 'git --version'
       }
+    }
     stage ("Git version")
     {
       steps ("Git version")
