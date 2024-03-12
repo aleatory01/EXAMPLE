@@ -1,15 +1,20 @@
 pipeline {
   agent any
-  stages {
-    stage ("Welcome") {
-      steps {
+  stages
+  {
+    stage ("Welcome")
+    {
+      steps
         echo "Welcome to Jenkins declaratives"
         sh 'git --version'
       }
-      steps ("Git version") {
+    stage ("Git version")
+    {
+      steps ("Git version")
+      {
         sh 'chmod +x hello.py'
         sh '/usr/bin/python3 hello.py'
       }
-    }
+    }  
   }
 }
