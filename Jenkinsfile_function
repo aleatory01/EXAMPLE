@@ -4,6 +4,13 @@ def Great (name)
 }
 
 /*******************************/
+def Run ()
+{
+  sh 'git --version'
+  sh 'chmod +x hello.py'
+  sh '/usr/bin/python3 hello.py'
+}
+/*******************************/
 pipeline 
 {
   agent any
@@ -16,6 +23,10 @@ pipeline
           echo "Welcome"
           Great ('NaiveSkill')
         }
+      }
+      stage ("Additional info")
+      {
+        Run ()
       }
   }
 }
